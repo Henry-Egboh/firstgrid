@@ -1,0 +1,209 @@
+/* general declaration */
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    /* background-color: rgb(73, 98, 141); */
+    /* background-color: rgb(67, 46, 49); */
+    font-size: 100%;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* ====================================
+                                        main container
+                                                 =================================================================  */
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+}
+
+/* general declarations for the divs  */
+.box{
+    /* border: 2px solid #ddeeaa; */
+    padding: 10px;
+    text-align: left;
+    /* background-color: rgb(67, 46, 49); */
+    background-color: rgb(73, 98, 141);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4), 0px 0px 6px 3px rgba(26, 26, 26, 0.2);
+}
+
+    /* give border to selected divs  */
+.box:not(.nav_content, .aside, .header, .footer){
+    border: 2px groove rgb(33, 16, 2);
+}
+
+    /* give border-radius to selected divs  */
+.box:not(.nav_content, .footer){
+    border-radius: 10px;
+}
+ 
+    /* headings styling for h3 in the various boxes  */
+h3{
+    padding: 10px 0px;
+    margin: 5px 0px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ddeeaa;
+}
+    /* p element styling  */
+p{
+    padding: 10px 0px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #e0d7b4;
+}
+
+ /* nav bar content  */
+.nav_content{
+    grid-column: 1 / 4; 
+    /* grid-column: 1 / span 2; */
+    background-color: rgb(67, 46, 49); 
+    /* box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4), 0px 0px 6px 0px rgba(26, 26, 26, 0.2); */
+    /* z-index: 1; */
+}
+
+.nav_content ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav_content ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.nav_content ul li{
+  /* float: left; */
+  display: inline-flex;
+}
+
+.nav_content ul li a{
+    color: #ddeeaa;
+    text-decoration: none;
+    padding: 16px 20px;
+    display: block;
+    font-weight: 600;
+}
+
+.nav_content ul li a:hover, .dropdown:hover{
+    background-color: #737470;
+    color: #ffeeff;
+    border-radius: 8px;
+}
+
+    /* sub menu items  */
+/* .drop_content{
+    background-color: #0c1003;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1; 
+} */
+
+.drop_content ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4), 0px 0px 6px 0px rgba(26, 26, 26, 0.2);
+    background-color: #0c1003;
+    padding: 10px;
+    min-width: 160px;
+    border-radius: 8px;
+    position: absolute;
+    margin-top: 3.4%;
+    margin-left: -5%;
+    z-index: 1;
+}
+
+.drop_content ul li{
+   /* float: none; */
+    display: inline-block;
+}
+
+.drop_content ul li a{
+    color: #737470;
+ }
+
+ .drop_content ul li a:hover{
+    background-color: #737470;
+    color:  rgb(46, 58, 58);
+}
+
+.drop_content ul{
+    display: none;
+}
+
+.dropdown:hover .drop_content ul{
+    display: block;
+}
+
+    /* ====================================================
+                                    aside content   =============================================================  */
+.aside{
+    grid-row: 2 / 5;
+    background-color: rgb(46, 58, 58);
+    box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.8);
+}
+/* 
+    ====================================================
+    bold content with an icon =========================================================================== */
+.header{
+    grid-column: 2 / 4;
+    background-color: rgb(46, 58, 58);
+    /* padding: 80px 50px; */
+    display: flex;
+}
+
+    /* section for the text  */
+.header_content{
+    flex: 3;
+    padding: 80px 50px;
+}
+
+    /* section for the icon  */
+.header_icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    
+}
+
+    /* icon on the header class  */
+.header_icon img{
+    width: 100px;
+    height: 100px;
+} 
+
+.header h3{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.header p{
+  text-align: left;
+}
+    /* styling the first p element on header class  */
+.header p:not(p:last-of-type){
+    font-size: 16px;
+    color: #e2e;
+    text-transform: capitalize;
+  }
+  
+
+  /* footer section  */
+.footer{
+    grid-column: -4 / -1;
+    background-color: rgb(33, 16, 2);
+}
