@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Titillium+Web&display=swap');
 /* general declaration */
 
 *{
@@ -6,11 +8,10 @@
     margin: 0px;
 }
 body{
-    /* background-color: rgb(73, 98, 141); */
-    /* background-color: rgb(67, 46, 49); */
+    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Titillium Web', sans-serif; */
     font-size: 100%;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
 }
 
@@ -45,14 +46,22 @@ body{
 }
  
     /* headings styling for h3 in the various boxes  */
-h3{
+h2, h3{
     padding: 10px 0px;
     margin: 5px 0px;
-    text-align: center;
     font-weight: 600;
-    font-size: 16px;
     color: #ddeeaa;
+    font-family: 'Titillium Web', sans-serif;
 }
+
+h2{
+    font-size: 18px;
+}
+
+h3{
+    font-size: 16px;
+}
+
     /* p element styling  */
 p{
     padding: 10px 0px;
@@ -61,19 +70,28 @@ p{
     color: #e0d7b4;
 }
 
- /* nav bar content  */
+    /* image section  */
+
+/* icon on the header class  */
+.header_icon img{
+        width: 100px;
+        height: 100px;
+}
+
+.adjust{
+   margin-left: 20px;
+}
+
+.space{
+    margin-left: 8px;
+}
+
+ /* ======================================================================
+                                        nav bar content ================================================================ */
 .nav_content{
     grid-column: 1 / 4; 
     /* grid-column: 1 / span 2; */
     background-color: rgb(67, 46, 49); 
-    /* box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4), 0px 0px 6px 0px rgba(26, 26, 26, 0.2); */
-    /* z-index: 1; */
-}
-
-.nav_content ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
 }
 
 .nav_content ul{
@@ -94,6 +112,7 @@ p{
     padding: 16px 20px;
     display: block;
     font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .nav_content ul li a:hover, .dropdown:hover{
@@ -102,41 +121,38 @@ p{
     border-radius: 8px;
 }
 
-    /* sub menu items  */
-/* .drop_content{
-    background-color: #0c1003;
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 1; 
-} */
-
+    /* sub menu items for more menu */
 .drop_content ul{
     list-style-type: none;
     margin: 0px;
-    padding: 0px;
+    /* padding: 0px; */
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4), 0px 0px 6px 0px rgba(26, 26, 26, 0.2);
-    background-color: #0c1003;
+    /* background-color: #0c1003; */
+    background-color: #2b2d2f;
     padding: 10px;
     min-width: 160px;
     border-radius: 8px;
     position: absolute;
-    margin-top: 3.4%;
-    margin-left: -5%;
+    margin-top: 56px;
+    margin-left: -125px;
     z-index: 1;
 }
 
 .drop_content ul li{
    /* float: none; */
-    display: inline-block;
+    display: block;
 }
 
 .drop_content ul li a{
-    color: #737470;
+    /* color: #737470; */
+    text-align: left;
+    color:  rgb(235, 255, 255);
  }
 
- .drop_content ul li a:hover{
+ .drop_content ul li a:hover, .dropdown_learning_menu:hover{
     background-color: #737470;
-    color:  rgb(46, 58, 58);
+    border-radius: 8px;
+    color:  rgb(235, 255, 255);
 }
 
 .drop_content ul{
@@ -146,6 +162,52 @@ p{
 .dropdown:hover .drop_content ul{
     display: block;
 }
+
+
+/* sub menu for learning menu  */
+
+.learning_menu ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px; 
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4), 0px 0px 6px 0px rgba(26, 26, 26, 0.2);
+    background-color: #2b2d2f;
+    min-width: 200px;
+    border-radius: 8px;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -55px;
+    z-index: 1;
+}
+
+.learning_menu ul li{
+    display: block;
+}
+
+.learning_menu ul li a{
+    text-align: left;
+    /* color:  rgb(104, 159, 159); */
+    color:  rgb(235, 255, 255);
+}
+
+.learning_menu ul li a:hover{
+    background-color: #737470;
+    color:  rgb(235, 255, 255);
+}
+
+.learning_menu{
+    display: none;
+}
+
+.dropdown_learning_menu:hover .learning_menu{
+    display: block;
+}
+
+
+/* ======================================================sub menu for the learning menu  */
+
+    /* the learning sub menu main container  */
+
 
     /* ====================================================
                                     aside content   =============================================================  */
@@ -178,12 +240,6 @@ p{
     padding-top: 20px;
     
 }
-
-    /* icon on the header class  */
-.header_icon img{
-    width: 100px;
-    height: 100px;
-} 
 
 .header h3{
     font-size: 30px;
